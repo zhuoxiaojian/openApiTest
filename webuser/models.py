@@ -4,7 +4,7 @@ from django.db import models
 class UserBase(models.Model):
     sex_dic = (('man', '男'), ('woman', '女'))
     name = models.CharField(max_length=255, verbose_name='姓名')
-    age = models.CharField(max_length=255, verbose_name='性别', choices=sex_dic)
+    sex = models.CharField(max_length=255, verbose_name='性别', choices=sex_dic)
 
     class Meta:
         verbose_name = '用户信息'
